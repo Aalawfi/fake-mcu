@@ -4,12 +4,23 @@ import axios from 'axios';
 function App() {
 
   const handleSubmission = () => {
+
+    // fetch data from the form
     var user_name = document.getElementById("username").value;
     var device_name = document.getElementById("device_name").value;
     var data = document.getElementById("data_value").value;
-    console.log(user_name);
-    console.log(device_name);
-    console.log(data);
+    
+    // send HTTP post request to the server 
+    axios.post(`http://www.ti-fi-uofsc.com/${user_name}/api/${device_name}/post-data/`, {
+      data: data
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
   }
   return (
     <div className="App">
@@ -35,16 +46,30 @@ function App() {
 
         <form className='App-form'>
         
-            <label>User name:</label>
+            <label> User name: </label>
             <input type="text"
                    id="username"
                    name="username" 
                    placeholder="Example: Alawfi"/>
-            <label>Device name:</label>
-            <input type="text" id="device_name" name="device_name" placeholder="Example: alawfimcu"/>
-            <label>Data (numbers only):</label>
-            <input type="number" id="data_value" name="data_value" placeholder="Example: 69.0"/>
-            <button type='button' onClick={handleSubmission}>submit</button> 
+
+            <label> Device name: </label>
+            <input type="text"
+                   id="device_name" 
+                   name="device_name"
+                   placeholder="Example: alawfimcu"/>
+
+            <label >Data (numbers only): </label>
+            <input type="number"
+                   id="data_value" 
+                   name="data_value" 
+                   placeholder="Example: 69.0"/>
+
+            {/* TODO: check if the entry is valid first?  */}
+            {/* TODO: restrict how many time you can post per second */}
+            <button type='button' 
+                    onClick={handleSubmission}>
+                      submit
+            </button> 
         
         </form>
 
