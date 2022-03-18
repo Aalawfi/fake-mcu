@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/fake-mcu/static/css/main.e6c13ad2.css",
-    "main.js": "/fake-mcu/static/js/main.c50c7308.js",
+    "main.css": "/fake-mcu/static/css/main.ca235441.css",
+    "main.js": "/fake-mcu/static/js/main.46cfb302.js",
     "index.html": "/fake-mcu/index.html",
-    "main.e6c13ad2.css.map": "/fake-mcu/static/css/main.e6c13ad2.css.map",
-    "main.c50c7308.js.map": "/fake-mcu/static/js/main.c50c7308.js.map"
+    "main.ca235441.css.map": "/fake-mcu/static/css/main.ca235441.css.map",
+    "main.46cfb302.js.map": "/fake-mcu/static/js/main.46cfb302.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.c50c7308.js"
+    "static/css/main.ca235441.css",
+    "static/js/main.46cfb302.js"
   ]
 }
