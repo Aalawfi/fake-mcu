@@ -9,13 +9,13 @@ function App() {
     var user_name = document.getElementById("username").value;
     var device_name = document.getElementById("device_name").value;
     var data = document.getElementById("data_value").value;
-    
+
     // send HTTP post request to the server 
     axios.post(`http://www.ti-fi-uofsc.com/${user_name}/api/${device_name}/post-data/`, {
       data: data
     })
     .then(function (response) {
-      console.log(response);
+      console.log(response); 
     })
     .catch(function (error) {
       console.log(error);
