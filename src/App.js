@@ -11,7 +11,7 @@ function App() {
     var data = document.getElementById("data_value").value;
 
     // send HTTP post request to the server 
-    axios.post(`http://www.ti-fi-uofsc.com/${user_name}/api/${device_name}/post-data/`, {
+    axios.post(`https://www.ti-fi-uofsc.com/${user_name}/api/${device_name}/post-data/`, {
       data: data
     })
     .then(function (response) {
